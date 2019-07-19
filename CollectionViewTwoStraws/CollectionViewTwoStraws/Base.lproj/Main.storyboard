@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SYO-eL-CGi">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="HPn-3t-ScR">
+            <objects>
+                <collectionViewController id="g32-oB-yu7" customClass="ViewController" customModule="CollectionViewTwoStraws" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="oMh-ef-GgH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vFI-S6-Tkq" customClass="CollectionViewGridLayout" customModule="CollectionViewTwoStraws" customModuleProvider="target">
+                            <size key="itemSize" width="170" height="170"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="40" maxX="0.0" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Button" id="N3A-p8-0Pr" customClass="ButtonCell" customModule="CollectionViewTwoStraws" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="40" width="170" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AgendaButton" translatesAutoresizingMaskIntoConstraints="NO" id="eAf-k7-IG6">
+                                            <rect key="frame" x="0.0" y="-18" width="185" height="207"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="imageView" destination="eAf-k7-IG6" id="xeL-fy-YAI"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="g32-oB-yu7" id="ZJ6-AG-kvX"/>
+                            <outlet property="delegate" destination="g32-oB-yu7" id="JSK-Wy-Hiy"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="eK5-Wm-Sf1"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="13t-Xp-EcP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168.11594202898553" y="-2808.4821428571427"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cgE-sr-Aqa">
+            <objects>
+                <viewController storyboardIdentifier="AgendaPage" id="Mek-lq-ZgV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="obQ-Jf-e8A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agenda Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YY-OX-nao">
+                                <rect key="frame" x="141" y="439" width="132" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="poG-df-S9o"/>
+                                    <constraint firstAttribute="height" constant="28" id="tAJ-h1-aqf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5YY-OX-nao" firstAttribute="centerY" secondItem="py2-DT-jD9" secondAttribute="centerY" id="5Ql-v2-HMr"/>
+                            <constraint firstItem="5YY-OX-nao" firstAttribute="centerX" secondItem="py2-DT-jD9" secondAttribute="centerX" id="ONa-Zg-6ZG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="py2-DT-jD9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zjj-vy-Vw8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1224.6376811594205" y="-2808.4821428571427"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SzW-g1-pGO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SYO-eL-CGi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6q5-dP-qOW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="g32-oB-yu7" kind="relationship" relationship="rootViewController" id="jMU-qk-wse"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JwL-ID-KMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-742.02898550724649" y="-2808.4821428571427"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AgendaButton" width="183" height="184"/>
+    </resources>
+</document>
